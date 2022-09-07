@@ -22,6 +22,18 @@ public class TestTestNG02 {
 		WebElement searchBox = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"));
 		searchBox.sendKeys("Google text");
 		searchBox.sendKeys(Keys.ENTER); 
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println(" current url is" + currentUrl);
+		System.out.println(" the Title is" + driver.getTitle());
+		driver.navigate().to("https;//demoqa.com/");
+		driver.navigate().back();
+		
+		driver.navigate().refresh();
+		driver.quit();
+		driver.close();
+		
+		
+		
 		
 		
 	}
